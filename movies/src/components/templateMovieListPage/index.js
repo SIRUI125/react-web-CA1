@@ -3,11 +3,15 @@ import Header from "../headerMovieList";
 import FilterCard from "../filterMoviesCard";
 import MovieList from "../movieList";
 import Grid from "@mui/material/Grid";
+import AddPagination from "../pagination";
 
 function MovieListPageTemplate({ movies, title, action }) {
   const [nameFilter, setNameFilter] = useState("");
   const [genreFilter, setGenreFilter] = useState("0");
   const genreId = Number(genreFilter);
+  const  setCurrentPage = useState(1);
+  const paginate = (pageNumber) =>setCurrentPage(pageNumber);
+ 
 
   let displayedMovies = movies
     .filter((m) => {
@@ -36,6 +40,7 @@ function MovieListPageTemplate({ movies, title, action }) {
           />
         </Grid>
         <MovieList action={action} movies={displayedMovies}></MovieList>
+        <AddPagination paginate ={paginate} />
       </Grid>
     </Grid>
   );
