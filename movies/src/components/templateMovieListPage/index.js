@@ -23,12 +23,12 @@ function MovieListPageTemplate({ movies, title, action }) {
   };
 
   return (
-    <Grid container sx={{ padding: '20px' }}>
-      <Grid item xs={12}>
+    <Grid container sx={{ padding: '30px', backgroundColor:'#45494f'}}>
+      <Grid item xs={12} sx={{marginBottom: '40px'}}>
         <Header title={title} />
       </Grid>
       <Grid item container spacing={5}>
-        <Grid key="find" item xs={12} sm={6} md={4} lg={3} xl={2}>
+        <Grid key="find" item xs={12} sm={6} md={4} lg={2} xl={2}>
           <FilterCard
             onUserInput={handleChange}
             titleFilter={nameFilter}
