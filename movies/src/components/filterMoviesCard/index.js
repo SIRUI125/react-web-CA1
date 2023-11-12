@@ -42,14 +42,16 @@ export default function FilterMoviesCard(props) {
     props.onUserInput(type, value); // NEW
   };
 
-  const handleTextChange = (e, props) => {
+  const handleTextChange = (e) => {
     handleChange(e, "name", e.target.value);
   };
 
   const handleGenreChange = (e) => {
     handleChange(e, "genre", e.target.value);
   };
-
+  const handleLanguageChange = (e) => {
+    handleChange(e, "language", e.target.value);
+  }
 
   return (
     <Card 
@@ -102,6 +104,24 @@ export default function FilterMoviesCard(props) {
           Filter the movies.
           <br />
         </Typography>
+        <FormControl sx={{...formControl}}>
+          <InputLabel id="genre-label">Language</InputLabel>
+          <Select
+            labelId="language-label"
+            id="language-select"
+            defaultValue=""
+            value={props.languageFilter}
+            onChange={handleLanguageChange}
+          >
+            {props.languages.map((language) => {
+              return (
+                <MenuItem key={language} value={language}>
+                  {language}
+                </MenuItem>
+              );
+            })}
+          </Select>
+        </FormControl>
       </CardContent>
     </Card>
   );
