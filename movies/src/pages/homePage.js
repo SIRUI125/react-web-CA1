@@ -36,7 +36,7 @@ import { useParams } from "react-router-dom";
       action={(movie) => {
         return <AddToFavoritesIcon movie={movie} />
       }}
-      sx={{backgroundColor:'#45494f', color:'white'}}
+      sx={{backgroundColor:'#45494f'}}
     />
     
 );
