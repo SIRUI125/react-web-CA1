@@ -49,11 +49,7 @@ export default function FilterMoviesCard(props) {
   const handleGenreChange = (e) => {
     handleChange(e, "genre", e.target.value);
   };
-// Calling a generic handleChange function and passing the event, a string identifier for the type of change ("language"), and the new value.
 
-  const handleLanguageChange = (e) => {
-    handleChange(e, "language", e.target.value);
-  }
 
   return (
     <Card 
@@ -76,22 +72,19 @@ export default function FilterMoviesCard(props) {
       value={props.titleFilter}
       onChange={handleTextChange}
     />
-     <FormControl sx={{...formControl}}>
-          <InputLabel id="genre-label">Language</InputLabel>
+        <FormControl sx={{...formControl}}>
+          <InputLabel id="genre-label">Genre</InputLabel>
           <Select
-            labelId="language-label"
-            // Associates the label with the Select component.
-            id="language-select"
-            defaultValue=""
-            value={props.languageFilter}
-            // The currently selected value, managed by the parent component's state.
-            onChange={handleLanguageChange}
-            // Function to call when the selected value changes.
-          >
-            {props.languages.map((language) => {
+    labelId="genre-label"
+    id="genre-select"
+    defaultValue=""
+    value={props.genreFilter}
+    onChange={handleGenreChange}
+  >
+            {genres.map((genre) => {
               return (
-                <MenuItem key={language} value={language}>
-                  {language}
+                <MenuItem key={genre.id} value={genre.id}>
+                  {genre.name}
                 </MenuItem>
               );
             })}
