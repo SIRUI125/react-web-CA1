@@ -1,5 +1,5 @@
 import React from "react";
-import TVHeader from "../headerPeople";
+import TVHeader from "../headerTV";
 import Grid from "@mui/material/Grid";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
