@@ -20,7 +20,6 @@ const SiteHeader = ({ history }) => {
 
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
-  
   const navigate = useNavigate();
 
   const menuOptions = [
@@ -29,7 +28,8 @@ const SiteHeader = ({ history }) => {
     { label: "Upcoming", path: "/movies/upcoming" },
     { label: "Toprated", path: "/movies/toprated" },
     { label: "People", path: "/movies/people" },
-    { label: "TV", path:"/movies/TV"}
+    { label: "TV", path:"/movies/TV"},
+    { label: "Login", path: "/login" },
   ];
 
   const handleMenuSelect = (pageURL) => {

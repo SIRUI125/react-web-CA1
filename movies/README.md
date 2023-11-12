@@ -14,7 +14,11 @@ Name: Sirui Yao
 + Add people page 
 + Add people detail page
 + Add all the pages of movies
-
++ Add tv page
++ Add details in tv page
++ Add tv filter and review
++
++
 ## Setup requirements.
 
 [ Outline any non-standard setup steps necessary to run your app locally after cloning the repo.]
