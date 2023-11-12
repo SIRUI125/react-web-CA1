@@ -1,13 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import Paper from "@mui/material/Paper";
-import NavigationIcon from "@mui/icons-material/Navigation";
-import Drawer from "@mui/material/Drawer";
-
-import Fab from "@mui/material/Fab";
 import Typography from "@mui/material/Typography";
-import PeopleReviews from "../peopleReviews";
 
-
+// Style object for the root element, used in Paper components.
 const root = {
     display: "flex",
     justifyContent: "center",
@@ -17,46 +12,24 @@ const root = {
     margin: 0,
 };
 
-
-const PeopleDetails = ({ people }) => {  // Don't miss this!
-  const [drawerOpen, setDrawerOpen] = useState(false);
-
+// PeopleDetails functional component, receiving 'people' as a prop.
+  const PeopleDetails = ({ people }) => {  // State for managing the drawer's open/close status.
   return (
+    // Fragment to group multiple elements without adding extra nodes to the DOM.
     <>
       <Typography variant="h5" component="h3">
         Biography
       </Typography>
-
       <Typography variant="h6" component="p">
         {people.biography}
       </Typography>
-
       <Paper 
         component="ul" 
         sx={{...root}}
       >
-
-
       </Paper>
       <Paper component="ul" sx={{...root}}>
-
       </Paper>
-      <Fab
-        color="secondary"
-        variant="extended"
-        onClick={() =>setDrawerOpen(true)}
-        sx={{
-          position: 'fixed',
-          bottom: '1em',
-          right: '1em'
-        }}
-      >
-        <NavigationIcon />
-        Reviews
-      </Fab>
-      <Drawer anchor="top" open={drawerOpen} onClose={() => setDrawerOpen(false)}>
-        <PeopleReviews movie={people} />
-      </Drawer>
       </>
   );
 };

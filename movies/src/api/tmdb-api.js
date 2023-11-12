@@ -150,3 +150,33 @@ export const gettopratedMovie = () => {
         throw error
      });
     };
+    export const getTV = () => {
+      return fetch(
+        `https://api.themoviedb.org/3/discover/tv?api_key=cd337e2cdf6450aa6801acff1fa9bee5&language=en-US&sort_by=popularity.desc&page=1&timezone=America%2FNew_York&include_null_first_air_dates=false&with_watch_monetization_types=flatrate&with_status=0&with_type=0`
+        ).then((response) => {
+          if (!response.ok) {
+            throw new Error(response.json().message);
+          }
+          return response.json();
+        })
+        .catch((error) => {
+           throw error
+        });
+      };  
+    export const getTVImages = ({ queryKey }) => {
+        const [, idPart] = queryKey;
+        const { id } = idPart;
+        return fetch(
+          `https://api.themoviedb.org/3/tv/${id}/images?api_key=cd337e2cdf6450aa6801acff1fa9bee5&language=en-US`
+        ).then( (response) => {
+          if (!response.ok) {
+            throw new Error(response.json().message);
+          }
+          return response.json();
+    
+        })
+        .catch((error) => {
+          throw error
+       });
+      };
+    

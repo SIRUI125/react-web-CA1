@@ -13,7 +13,7 @@ Name: Sirui Yao
 + Add toprated page
 + Add people page 
 + Add people detail page
-+ etc
++ Add all the pages of movies
 
 ## Setup requirements.
 
