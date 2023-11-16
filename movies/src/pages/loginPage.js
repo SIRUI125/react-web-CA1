@@ -9,11 +9,11 @@ import {
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 
 const LoginPage = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const navigate = useNavigate();
-
-  const handleLogin = async (e) => {
+const [email, setEmail] = useState('');
+const [password, setPassword] = useState('');
+const navigate = useNavigate();
+// Function to handle login with Firebase
+const handleLogin = async (e) => {
     e.preventDefault();
     try {
       await signInWithEmailAndPassword(auth, email, password);
@@ -23,8 +23,8 @@ const LoginPage = () => {
       console.error(error.message);
     }
   };
-
-  const handleSignUp = async (e) => {
+// Function to handle user registration with Firebase
+const handleSignUp = async (e) => {
     e.preventDefault();
     try {
       await createUserWithEmailAndPassword(auth, email, password);
@@ -34,7 +34,7 @@ const LoginPage = () => {
       console.error(error.message);
     }
   };
-
+// The UI of the component
   return (
     <Container component="main" maxWidth="xs">
       <CssBaseline />

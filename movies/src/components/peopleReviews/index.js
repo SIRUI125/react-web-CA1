@@ -7,7 +7,6 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import { Link } from "react-router-dom";
-
 import { excerpt } from "../../util";
 import { getPeopledetail } from "../../api/tmdb-api";
 
@@ -18,7 +17,7 @@ export default function PeopleReviews({ people }) {
     getPeopledetail(people.id).then((biography) => {
       setBiography(biography);
     });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+// eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

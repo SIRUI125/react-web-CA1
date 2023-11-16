@@ -7,12 +7,9 @@ import CardActions from "@mui/material/CardActions";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import StarRateIcon from "@mui/icons-material/StarRate";
-
 import Grid from "@mui/material/Grid";
 import img from '../../images/film-poster-placeholder.png'
 import { Link } from "react-router-dom";
-
-
 
 export default function PeopleCard({ people }) {
 

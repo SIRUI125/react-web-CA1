@@ -7,14 +7,16 @@ import { Link, useParams } from 'react-router-dom';
 // Function to handle page changes.
     const AddPagination = ({setPage, numOfPages = 500, paginate}) =>{
     const handlePageChange = (page) =>{
-      setPage (page);// Updating the current page.
-      window.scroll(0,0);// Scrolling to the top of the page.
+      setPage (page);
+// Updating the current page.
+      window.scroll(0,0);
+// Scrolling to the top of the page.
     }
 // Retrieving the current page number from the URL parameters.
     const{page} = useParams()
     console.log((page))
   return (
-  // Stack component from Material-UI to layout pagination buttons.
+// Stack component from Material-UI to layout pagination buttons.
     <Stack spacing={2}
      sx={{ justifyContent: 'center', margin: 'auto', marginTop:'50px'}}>
       <Pagination count={numOfPages} 

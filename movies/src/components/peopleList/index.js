@@ -10,5 +10,4 @@ const PeopleList = ( {persons, action }) => {
   ));
   return peopleCard;
 };
-
 export default PeopleList;

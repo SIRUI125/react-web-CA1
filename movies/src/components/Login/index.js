@@ -4,14 +4,15 @@ import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } f
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-
   const auth = getAuth();
-
+// Function to handle user login
+// It uses Firebase's signInWithEmailAndPassword method
   const handleLogin = () => {
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
-        // Signed in 
+// Signed in 
         const user = userCredential.user;
+// Handle errors here, like incorrect password or no user found
         console.log(user);
       })
       .catch((error) => {
@@ -30,7 +31,7 @@ function Login() {
         console.error(error);
       });
   };
-
+// The component renders two input fields for email and password,
   return (
     <div>
       <input type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="Email" />

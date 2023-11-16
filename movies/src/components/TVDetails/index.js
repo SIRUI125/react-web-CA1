@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Chip from "@mui/material/Chip";
 import Paper from "@mui/material/Paper";
-
 import StarRate from "@mui/icons-material/StarRate";
 import NavigationIcon from "@mui/icons-material/Navigation";
 import Drawer from "@mui/material/Drawer";
@@ -17,8 +16,11 @@ import Typography from "@mui/material/Typography";
     padding: 1.5,
     margin: 0,
 };
+// Styling for each chip
   const chip = { margin: 0.5 };
-  const TVDetails = ({ TV }) => {  // Don't miss this!
+// TVDetails component displays detailed information about a specific TV show.
+  const TVDetails = ({ TV }) => {  
+// State for managing the visibility of the Drawer component
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   return (

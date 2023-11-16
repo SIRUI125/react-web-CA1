@@ -6,9 +6,10 @@ import PageTemplate from "../components/templatePeoplePage";
 import {  getPeopledetail } from '../api/tmdb-api'
 import { useQuery } from "react-query";
 import Spinner from '../components/spinner'
+
 const PeopleDetailPage = (props) => {
-  const { id } = useParams();
-  const { data: people, error, isLoading, isError } = useQuery(
+const { id } = useParams();
+const { data: people, error, isLoading, isError } = useQuery(
     ["people", { id: id }],
     getPeopledetail
   );

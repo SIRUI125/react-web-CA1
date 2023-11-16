@@ -5,7 +5,7 @@ import PageTemplate from "../components/templateTVPage";
 import { getTVdetail } from '../api/tmdb-api'
 import { useQuery } from "react-query";
 import Spinner from '../components/spinner'
-const TVDetailPage = (props) => {
+  const TVDetailPage = (props) => {
   const { id } = useParams();
   const { data: TV, error, isLoading, isError } = useQuery(
     ["TV", { id: id }],

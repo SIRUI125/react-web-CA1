@@ -8,7 +8,7 @@ import Spinner from '../components/spinner';
   const TVPage = (props) => {
 // Using the useQuery hook to fetch TV data. 'TV' is the query key and getTV is the query function.
   const {  data, error, isLoading, isError }  = useQuery('TV', getTV)
- // Handling the loading state. If data is being loaded, the Spinner component is rendered.
+// Handling the loading state. If data is being loaded, the Spinner component is rendered.
   if (isLoading) {
     return <Spinner />
   }
@@ -16,8 +16,8 @@ import Spinner from '../components/spinner';
     return <h1>{error.message}</h1>
   }  
   const TV = data.results;
-  //const addToFavorites = (movieId) => true 
-  // Rendering the PageTemplate component with the title and the TV shows data.
+//const addToFavorites = (movieId) => true 
+// Rendering the PageTemplate component with the title and the TV shows data.
   return (
     <PageTemplate
       title="Discover TV"

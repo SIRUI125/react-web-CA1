@@ -31,7 +31,7 @@ import MuiAlert from "@mui/material/Alert";
     label: "Terrible",
   },
 ];
-
+// Styles for various elements of the form
   const styles = {
   root: {
     marginTop: 2,
@@ -58,28 +58,28 @@ import MuiAlert from "@mui/material/Alert";
     },
   },
 };
-    const ReviewForm = ({ TV }) => {
-    const context = useContext(TVContext);
-    const [open, setOpen] = useState(false); 
-    const [rating, setRating] = useState(3);
-    const defaultValues = {
-    author: "",
-    review: "",
-    agree: false,
-    rating: "3",
+  const ReviewForm = ({ TV }) => {
+  const context = useContext(TVContext);
+  const [open, setOpen] = useState(false); 
+  const [rating, setRating] = useState(3);
+  const defaultValues = {
+  author: "",
+  review: "",
+  agree: false,
+  rating: "3",
   };
-
+// useForm hook from react-hook-form for form validation and handling
   const {
     control,
     formState: { errors },
     handleSubmit,
     reset,
   } = useForm(defaultValues);
-
+// Function to handle changes in the rating selection
   const handleRatingChange = (event) => {
     setRating(event.target.value);
   };
-
+// Function to handle form submission
   const onSubmit = (review) => {
     review.TVId = TV.id;
     review.rating = rating;
