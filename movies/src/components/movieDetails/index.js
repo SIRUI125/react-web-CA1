@@ -12,7 +12,7 @@ import MovieReviews from "../movieReviews"
 
 const root = {
     display: "flex",
-    justifyContent: "center",
+    justifyContent: "left",
     flexWrap: "wrap",
     listStyle: "none",
     padding: 1.5,
