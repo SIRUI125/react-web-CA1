@@ -7,7 +7,6 @@ Name: Sirui Yao
 This assignment is based on react-movie-labs and adds a few pages and features to the original. Users can register with firebase authentication and log in to save their changes, and then they can choose to watch the tvshow and cast list.Users can also give their own reviews and ratings for their favourite films.Users can filter the films they want to watch in different languages.
 
 ### Features.
-+ Change the background colour of the page
 + Add toprated page
 + Add people page 
 + Add people detail page
@@ -23,24 +22,17 @@ This assignment is based on react-movie-labs and adds a few pages and features t
 + Write reviews about movies
 ## Setup requirements.
 
-You need to npm install firebase,npm install react-firebase-hooks and register an account on firebase and add login function.After these steps,users can sign up and login in within the web application.
+You need to npm install firebase,npm install react-firebase-hooks and register an account on firebase and add login function.After these steps,users can sign up and login in by using the web application.
 
 ## API endpoints.
 
 People Details - /people/:id
-
 Popular people - /movies/people
-
 Login Page - /pages/login
-
 Logout Page - /pages/logout
-
 TV Detail Page - /TV/:id
-
 Top Rated Movies - /movies/topRated
-
 Language Filter - /components/filterMoviesCard
-
 Discover list of upcoming movies - movie/upcoming
 ## Routing.
 
@@ -58,13 +50,11 @@ Discover list of upcoming movies - movie/upcoming
 + /pagination - Allow for a user to choose movies from any pages from 1 to 500(public)
 
 ## Independent learning .
-I studied the tutorials on the firebase website and added them to my project.
+I studied the tutorials on the firebase website and added them to my project.With firebase installed,users can log in with their email and password safely.
 
 ## Reference.
 UI components:"https://mui.com/"
-
 Pagination:" https://mui.com/material-ui/react-pagination/#basic-pagination"
-
 My firebase:" https://console.firebase.google.com/project/react-movies-lab/overview?hl=zh-cn"
-
 Install firebase:"https://firebase.google.com/docs/web/setup?authuser=0&hl=zh"
+
