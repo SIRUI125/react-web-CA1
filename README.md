@@ -54,7 +54,10 @@ I studied the tutorials on the firebase website and added them to my project.Wit
 
 ## Reference.
 UI components:"https://mui.com/"
+
 Pagination:" https://mui.com/material-ui/react-pagination/#basic-pagination"
+
 My firebase:" https://console.firebase.google.com/project/react-movies-lab/overview?hl=zh-cn"
+
 Install firebase:"https://firebase.google.com/docs/web/setup?authuser=0&hl=zh"
 
