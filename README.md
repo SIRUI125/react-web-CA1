@@ -51,13 +51,15 @@ Discover list of upcoming movies - movie/upcoming
 
 ## Independent learning .
 I studied the tutorials on the firebase website and added them to my project.With firebase installed,users can log in with their email and password safely.
-
+Firebase apiKey you can find in src/components/firebase/firebase.js
+My github :"https://github.com/SIRUI125/react-web-CA1.git"
 ## Reference.
 UI components:"https://mui.com/"
-
 Pagination:" https://mui.com/material-ui/react-pagination/#basic-pagination"
-
 My firebase:" https://console.firebase.google.com/project/react-movies-lab/overview?hl=zh-cn"
-
 Install firebase:"https://firebase.google.com/docs/web/setup?authuser=0&hl=zh"
+
+## Video
+bilibili:https://www.bilibili.com/video/BV1gu4y157TY/?spm_id_from=333.999.0.0&vd_source=03afbcdcba996eb6dd8b44768d203373
+youtube:https://youtu.be/soNMaUHh2DM
 
